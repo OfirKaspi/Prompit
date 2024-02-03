@@ -13,7 +13,10 @@ module.exports = {
       },
       colors: {
         'primary-orange': '#FF5722',
-      }
+      },
+      boxShadow: {
+        'custom': 'inset 10px -50px 94px 0 rgba(199, 199, 199, 0.2)',
+      },
     },
   },
   plugins: [],

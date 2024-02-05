@@ -6,7 +6,7 @@ const Home = () => {
         <div className='f-full flex-col flex-center'>
             <h1 className='head_text text-center'>
                 Discover & Share
-                <br className='max-md:hidden' />
+                <br />
                 <span className='orange_gradient text-center'>
                     AI-Powered Prompts
                 </span>

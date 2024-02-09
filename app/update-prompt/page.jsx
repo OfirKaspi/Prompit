@@ -51,6 +51,8 @@ const EditPrompt = () => {
         }
     }
 
+    if (!promptId) return <></>
+
     return (
         <Form
             type='Edit'

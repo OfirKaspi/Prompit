@@ -1,17 +1,16 @@
 'use client'
 
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import Profile from '@components/profile'
+
+import Profile from '@components/Profile'
 
 const MyProfile = () => {
 
+    const router = useRouter()
     const { data: session } = useSession()
     const [posts, setPosts] = useState([])
-
-    console.log('posts', posts);
-    console.log('session id', session?._id)
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -31,12 +30,12 @@ const MyProfile = () => {
         }
     }, [session])
 
-    const handleDelete = async () => {
+    const handleDelete = async (post) => {
 
     }
 
-    const handleEdit = async () => {
-
+    const handleEdit = async (post) => {
+        router.push(`/update-prompt?id=${post._id}`)
     }
 
     return (

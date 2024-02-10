@@ -10,8 +10,8 @@ const EditPrompt = () => {
     const [submitting, setSubmitting] = useState(false)
     const [post, setPost] = useState({ prompt: '', tag: '' })
 
-    const serachParams = useSearchParams()
-    const promptId = serachParams.get('id') || null
+    const searchParams = useSearchParams()
+    const promptId = searchParams.get('id') || null
 
     useEffect(() => {
         const getPromptDetails = async () => {
